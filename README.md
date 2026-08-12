@@ -1,23 +1,16 @@
-# 🚀 Desafio Flexbox & Interatividade (Hover + Dark Mode)
+# 🎨 Desafio CSS - Cards com Variáveis e Temas
 
-Projeto desenvolvido como parte do desafio prático de CSS para aprimorar animações com `:hover`, manipulação de sombras (`box-shadow`) e estilização para **Modo Escuro**.
+Este projeto implementa uma lista de postagens horizontais utilizando **CSS Flexbox**, **Variáveis CSS** e suporte dinâmico a **Modo Escuro (Dark Mode)**.
 
-## 🎯 Requisitos Implementados neste Desafio
+## 🚀 Diferenciais desta Implementação
 
-1. **Efeito `:hover` com Scale:** O seletor `article:hover` aplica `transform: scale(1.02)` aumentando suavemente o card ao passar o mouse.
-2. **Sombra Intensa no `:hover`:** Aumento do raio de desfoque e opacidade da propriedade `box-shadow`.
-3. **Sombra Personalizada no Modo Escuro:** No tema escuro (`.dark-mode`), a sombra no `:hover` utiliza uma cor de contraste brilhante (`rgba(0, 150, 255, 0.35)`), criando um efeito neon/profundidade visível em fundos escuros.
-4. **Transição Suave:** Adicionada a propriedade `transition` para que a expansão e o efeito de sombra ocorram sem sobressaltos.
+- **Variáveis CSS (`:root` e `[data-theme]`):** Centralização de todas as cores e sombras em um só lugar. A sombra no `:hover` no Modo Escuro ganha um tom azul brilhante através da variável `--card-shadow-hover`.
+- **Nomenclatura BEM:** Código CSS limpo e legível utilizando o padrão `.block__element`.
+- **Efeito Zoom com Interatividade:**
+  - `transform: scale(1.02)` no seletor `.card:hover`.
+  - Transição suave controlada via `cubic-bezier`.
+- **Flexbox Responsivo:**
+  - `flex-direction: row` nos cards (`article`).
+  - `align-self: flex-start` aplicado nos botões para alinhar ao topo do eixo transversal.
 
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**
-- **CSS3** (Flexbox, CSS Transitions, Dark Mode)
-- **JavaScript ES6** (Alternância de Tema)
-
-## 📂 Como testar
-
-1. Clone o repositório para sua máquina.
-2. Abra o arquivo `index.html` em qualquer navegador moderno.
-3. Passe o cursor do mouse sobre os cards para testar a animação.
-4. Clique no botão **"Mudar Tema 🌙"** para testar o efeito de sombra no Modo Escuro!
+## 📁 Estrutura do Projeto
