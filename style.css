@@ -1,0 +1,124 @@
+/* Reseta estilos padrão */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+}
+
+.theme-btn {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card base */
+article {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 100%;
+  width: 100%;
+  
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+
+  /* Sombra suave inicial */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Transição suave para o efeito de zoom e sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* DESAFIO: Efeito :hover no Card */
+article:hover {
+  transform: scale(1.02); /* Aumenta levemente de tamanho */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Imagem e Conteúdo do Card */
+article img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card-btn {
+  padding: 10px 16px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #004b99;
+}
+
+/* =========================================
+   DESAFIO: Estilos do Modo Escuro (Dark Mode)
+   ========================================= */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f4f4f9;
+}
+
+body.dark-mode .theme-btn {
+  background-color: #f4f4f9;
+  color: #121212;
+}
+
+body.dark-mode article {
+  background-color: #1e1e1e;
+  /* Sombra inicial suave no modo escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover no Modo Escuro: Sombra em tom Azul Brilhante */
+body.dark-mode article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 150, 255, 0.35); /* Brilho/Sombra azulada para dar profundidade */
+}
